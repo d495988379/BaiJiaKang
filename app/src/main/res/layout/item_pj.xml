@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/itemPjHead"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/ic_default_head"/>
+
+        <TextView
+            android:id="@+id/itemPjName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"/>
+
+        <com.willy.ratingbar.ScaleRatingBar
+            android:id="@+id/simpleRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            app:srb_clearRatingEnabled="true"
+            app:srb_clickable="false"
+            app:srb_drawableEmpty="@mipmap/shop_star_gery"
+            app:srb_drawableFilled="@mipmap/shop_star_yellow"
+            app:srb_isIndicator="false"
+            app:srb_numStars="5"
+            app:srb_rating="0"
+            app:srb_scrollable="false"
+            app:srb_starHeight="17dp"
+            app:srb_starPadding="5dp"
+            app:srb_starWidth="17dp"
+            app:srb_stepSize="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/itemPjContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#404040"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="15dp">
+
+        <ImageView
+            android:id="@+id/itemPjImg1"
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp" />
+
+        <ImageView
+            android:id="@+id/itemPjImg2"
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp" />
+
+        <ImageView
+            android:id="@+id/itemPjImg3"
+            android:layout_width="0dp"
+            android:layout_height="108dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp" />
+
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#f2f2f2"/>
+
+</LinearLayout>

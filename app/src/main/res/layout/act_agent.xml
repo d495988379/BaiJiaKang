@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.nuogao.titlebar.widget.CommonTitleBar
+        android:id="@+id/commonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="代理管理"
+        app:centerTextColor="@color/white"
+        app:centerTextSize="16sp"
+        app:centerType="textView"
+        app:leftImageResource="@mipmap/ic_back_img"
+        app:leftType="imageButton"
+        app:rightText="会员权益"
+        app:rightTextColor="@color/white"
+        app:rightTextSize="12sp"
+        app:rightType="textView"
+        app:showBottomLine="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/main_color"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:id="@+id/agentLinW"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/agentImg1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/ic_agent_img1" />
+
+                    <ImageView
+                        android:id="@+id/agentImg2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/ic_agent_img2" />
+                </LinearLayout>
+
+                <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+                    android:id="@+id/swipeToLoadLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp">
+
+                    <com.zlxn.dl.baijiakang.view.MyScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/agentRel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.lihang.ShadowLayout
+                                    android:id="@+id/agentSl1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:hl_cornerRadius="15dp"
+                                    app:hl_shadowColor="#10000000"
+                                    app:hl_shadowLimit="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="140dp">
+
+                                        <ImageView
+                                            android:id="@+id/itemAgentImg1"
+                                            android:layout_width="140dp"
+                                            android:layout_height="95dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="12dp"
+                                            android:src="@mipmap/ic_jin_card1" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_toRightOf="@id/itemAgentImg1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="客户人数"
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                                <TextView
+                                                    android:id="@+id/agentTv1"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="25dp"
+                                                    android:text=""
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </com.lihang.ShadowLayout>
+
+                                <com.lihang.ShadowLayout
+                                    android:id="@+id/agentSl2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:hl_cornerRadius="15dp"
+                                    app:hl_shadowColor="#10000000"
+                                    app:hl_shadowLimit="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="140dp">
+
+                                        <ImageView
+                                            android:id="@+id/itemAgentImg2"
+                                            android:layout_width="140dp"
+                                            android:layout_height="95dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="12dp"
+                                            android:src="@mipmap/ic_jin_card2" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_toRightOf="@id/itemAgentImg2"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="15dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="客户人数"
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                                <TextView
+                                                    android:id="@+id/agentTv2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="25dp"
+                                                    android:text=""
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </com.lihang.ShadowLayout>
+
+                                <com.lihang.ShadowLayout
+                                    android:id="@+id/agentSl3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:hl_cornerRadius="15dp"
+                                    app:hl_shadowColor="#10000000"
+                                    app:hl_shadowLimit="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="140dp">
+
+                                        <ImageView
+                                            android:id="@+id/itemAgentImg3"
+                                            android:layout_width="140dp"
+                                            android:layout_height="95dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="12dp"
+                                            android:src="@mipmap/ic_jin_card3" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_toRightOf="@id/itemAgentImg3"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="15dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="客户人数"
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                                <TextView
+                                                    android:id="@+id/agentTv3"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="25dp"
+                                                    android:text=""
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </com.lihang.ShadowLayout>
+
+                                <com.lihang.ShadowLayout
+                                    android:id="@+id/agentSl4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:hl_cornerRadius="15dp"
+                                    app:hl_shadowColor="#10000000"
+                                    app:hl_shadowLimit="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="140dp">
+
+                                        <ImageView
+                                            android:id="@+id/itemAgentImg4"
+                                            android:layout_width="140dp"
+                                            android:layout_height="95dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="12dp"
+                                            android:src="@mipmap/ic_jin_card4" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_toRightOf="@id/itemAgentImg4"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="15dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="客户人数"
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                                <TextView
+                                                    android:id="@+id/agentTv4"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="25dp"
+                                                    android:text=""
+                                                    android:textColor="#727272"
+                                                    android:textSize="13sp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </com.lihang.ShadowLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/agentLin"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <com.lihang.ShadowLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="15dp"
+                                    app:hl_cornerRadius="15dp"
+                                    app:hl_shadowColor="#10000000"
+                                    app:hl_shadowLimit="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="250dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/agentJlMoney"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="40dp"
+                                            android:text="0.0元"
+                                            android:textColor="#404040"
+                                            android:textSize="24sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/agentJlMoney"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginTop="10dp"
+                                            android:text="推荐用户奖励(元)"
+                                            android:textColor="#727272"
+                                            android:textSize="12sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_marginBottom="45dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/agentZjMoney"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="0.0元"
+                                                android:textColor="#404040"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="12dp"
+                                                android:text="直接返佣(元)"
+                                                android:textColor="#727272"
+                                                android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_marginRight="30dp"
+                                            android:layout_marginBottom="45dp"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/agentTdMoney"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="0.0元"
+                                                android:textColor="#404040"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="12dp"
+                                                android:text="团队返佣(元)"
+                                                android:textColor="#727272"
+                                                android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </com.lihang.ShadowLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="返佣记录"
+                                    android:textColor="#404040"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/agentRv1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="15dp"
+                                        android:layout_marginTop="5dp" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </com.zlxn.dl.baijiakang.view.MyScrollView>
+
+                </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

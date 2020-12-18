@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nuogao.titlebar.widget.CommonTitleBar
+        android:id="@+id/commonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="购物车"
+        app:centerTextColor="@color/white"
+        app:centerTextSize="16sp"
+        app:centerType="textView"
+        app:leftImageResource="@mipmap/ic_back_img"
+        app:leftType="imageButton"
+        app:showBottomLine="false"
+        app:rightType="textView"
+        app:rightTextColor="@color/white"
+        app:rightTextSize="12sp"
+        app:rightText="管理"/>
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/shoppingRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/commonBar"
+        android:layout_marginBottom="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/ll_select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_select_all"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/ic_unselect_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:text="全选"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/main_color"
+            android:text="提交订单"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/main_color"
+            android:text="删除"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/rl_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_order"
+            android:layout_toRightOf="@id/ll_select_all"
+            android:orientation="vertical"
+            android:gravity="right|center">
+
+            <TextView
+                android:id="@+id/tv_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="实付款：￥0.0"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_total_quan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="券总额：0.0"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@id/tv_total_price"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="15sp" />-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

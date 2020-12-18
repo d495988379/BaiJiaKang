@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nuogao.titlebar.widget.CommonTitleBar
+        android:id="@+id/commonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="设置"
+        app:centerTextColor="@color/white"
+        app:centerTextSize="16sp"
+        app:centerType="textView"
+        app:leftImageResource="@mipmap/ic_back_img"
+        app:leftType="imageButton"
+        app:showBottomLine="false" />
+
+    <TextView
+        android:id="@+id/setLoginPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改登录密码"
+        android:textSize="14sp"
+        android:textColor="#404040"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E4E4"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/setPayPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置支付密码"
+        android:textSize="14sp"
+        android:textColor="#404040"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E4E4"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

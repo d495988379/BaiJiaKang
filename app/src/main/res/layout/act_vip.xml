@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.nuogao.titlebar.widget.CommonTitleBar
+        android:id="@+id/commonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="会员权益"
+        app:centerTextColor="@color/white"
+        app:centerTextSize="16sp"
+        app:centerType="textView"
+        app:leftImageResource="@mipmap/ic_back_img"
+        app:leftType="imageButton"
+        app:showBottomLine="false" />
+
+    <com.zlxn.dl.baijiakang.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/main_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/ic_hy_bg_img">
+
+                    <ImageView
+                        android:id="@+id/vipHead"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="23dp"
+                        android:src="@mipmap/ic_head_img" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_toRightOf="@id/vipHead"
+                        android:text="粉丝会员"
+                        android:textColor="#404040"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/vipHead"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="享受权益：享受权益享受权益享受权益享受权益享受权益享受权益"
+                        android:textColor="#727272"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/ic_vip_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/ic_vip_left_img">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="升级为金卡会员"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="升级为银卡会员"
+                            android:textColor="#03AE7E"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@mipmap/ic_vip_right_img">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="升级为普卡会员"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:text="会员权益介绍"
+                android:textColor="#404040"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.lihang.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                app:hl_cornerRadius="15dp"
+                app:hl_shadowColor="#10000000"
+                app:hl_shadowLimit="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="会员包括：粉丝会员、普卡会员、银卡会员、金卡会员"
+                        android:textColor="#727272"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="有效期：普卡会员、银卡会员、金卡会员没有有效期"
+                        android:textColor="#727272"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="购卡规则：只能购买更高一级，否则一次购买之后不需要重复购买"
+                        android:textColor="#727272"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="会员包括：粉丝会员、普卡会员、银卡会员、金卡会员"
+                        android:textColor="#727272"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="会员包括：粉丝会员、普卡会员、银卡会员、金卡会员 粉丝会员、普卡会员、银卡会员、金卡会员粉丝会员、 普卡会员、银卡会员、金卡会员 "
+                        android:textColor="#727272"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shape_btn_bg"
+                android:text="成为普卡会员"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </com.zlxn.dl.baijiakang.view.MyScrollView>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:hl_cornerRadius="15dp"
+        app:hl_shadowColor="#10000000"
+        app:hl_shadowLimit="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="116dp">
+
+            <RelativeLayout
+                android:id="@+id/rechargeRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="话费充值"
+                    android:textColor="#404040"
+                    android:layout_marginLeft="15dp"
+                    android:drawableLeft="@mipmap/ic_user_img"
+                    android:gravity="center"
+                    android:drawablePadding="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2020-10-10 14:00:00"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/rechargeRel">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100.00"
+                    android:textSize="20sp"
+                    android:textColor="#404040"
+                    android:layout_marginLeft="35dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元"
+                    android:textColor="#404040"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="7dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rechargeMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付：100.00元"
+                android:textSize="12sp"
+                android:textColor="#888888"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rechargeRel"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已充值"
+                android:textSize="14sp"
+                android:textColor="#404040"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rechargeMoney"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"/>
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+
+</LinearLayout>

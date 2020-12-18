@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/shape_commodity_bg">
+
+    <ImageView
+        android:id="@+id/commodityImg"
+        android:layout_width="122dp"
+        android:layout_height="122dp"
+        android:src="@mipmap/ic_commodity_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/commodityName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@id/commodityImg"
+        android:text="云南白药药膏活血化瘀 消肿止痛祛风湿除湿疼"
+        android:textColor="#404040"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:layout_marginTop="13dp"/>
+
+    <LinearLayout
+        android:id="@+id/commodityLin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_below="@id/commodityName"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_money_img" />
+
+        <TextView
+            android:id="@+id/commodityMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="#F7282F"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="+"
+            android:textColor="#F7282F"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/ic_quan_img" />
+
+        <TextView
+            android:id="@+id/commodityQuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="#F7282F"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/commodityJy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="建议零售价：¥45"
+        android:textSize="9sp"
+        android:textColor="#9E9E9E"
+        android:layout_below="@id/commodityLin"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,171 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //support
+    api(rootProject.ext.dependenciesLibs["support-v4"]) {
+        exclude module: 'support-annotations'
+    }
+    api(rootProject.ext.dependenciesLibs["appcompat-v7"]) {
+        exclude module: 'support-annotations'
+        exclude module: 'support-v4'
+    }
+    api(rootProject.ext.dependenciesLibs["design"]) {
+        exclude module: 'support-annotations'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+    api(rootProject.ext.dependenciesLibs["recyclerview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    api(rootProject.ext.dependenciesLibs["cardview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    api rootProject.ext.dependenciesLibs["annotations"]
+
+    //view
+    api(rootProject.ext.dependenciesLibs["autolayout"]) {
+        exclude group: 'com.android.support'
+    }
+    api(rootProject.ext.dependenciesLibs["adapterhelper"]) {
+        exclude module: 'recyclerview-v7'
+    }
+    api(rootProject.ext.dependenciesLibs["tablayout"]) {
+        exclude module: 'support-v4'
+    }
+    api(rootProject.ext.dependenciesLibs["circleimageview"]) {
+        exclude module: 'support-annotations'
+    }
+
+    api rootProject.ext.dependenciesLibs["badgeView"]
+
+    api(rootProject.ext.dependenciesLibs["roll"]) {
+        exclude module: 'support-v4'
+    }
+
+    api(rootProject.ext.dependenciesLibs["butterknife"]) {
+        exclude module: 'support-annotations'
+    }
+
+    api(rootProject.ext.dependenciesLibs["timepicker"]) {
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+
+    api rootProject.ext.dependenciesLibs["load-more"]
+
+    //rx
+    api rootProject.ext.dependenciesLibs["rxjava2"]
+    api(rootProject.ext.dependenciesLibs["rxandroid2"]) {
+        exclude module: 'rxjava'
+    }
+    api(rootProject.ext.dependenciesLibs["rxcache2"]) {
+        exclude module: 'rxjava'
+        exclude module: 'dagger'
+    }
+    api(rootProject.ext.dependenciesLibs["rxcache-jolyglot-gson"]) {
+        exclude module: 'gson'
+    }
+    api(rootProject.ext.dependenciesLibs["rxlifecycle2"]) {
+        exclude module: 'rxjava'
+        exclude module: 'jsr305'
+    }
+    api(rootProject.ext.dependenciesLibs["rxlifecycle2-android"]) {
+        exclude module: 'support-annotations'
+        exclude module: 'rxjava'
+        exclude module: 'rxandroid'
+        exclude module: 'rxlifecycle'
+    }
+    api(rootProject.ext.dependenciesLibs["rxpermissions2"]) {
+        exclude module: 'rxjava'
+        exclude module: 'support-annotations'
+    }
+    api rootProject.ext.dependenciesLibs['rxerrorhandler2']
+
+    //network
+    api(rootProject.ext.dependenciesLibs["retrofit"]) {
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+    }
+    api(rootProject.ext.dependenciesLibs["retrofit-converter-gson"]) {
+        exclude module: 'gson'
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+        exclude module: 'retrofit'
+    }
+    api(rootProject.ext.dependenciesLibs["retrofit-adapter-rxjava2"]) {
+        exclude module: 'rxjava'
+        exclude module: 'okhttp'
+        exclude module: 'retrofit'
+        exclude module: 'okio'
+    }
+    api rootProject.ext.dependenciesLibs["okhttp3"]
+
+    api(rootProject.ext.dependenciesLibs["glide"]) {
+        exclude module: 'support-v4'
+    }
+    annotationProcessor(rootProject.ext.dependenciesLibs["glide-compiler"]) {
+        exclude module: 'jsr305'
+    }
+
+    api rootProject.ext.dependenciesLibs["progressmanager"]
+    api rootProject.ext.dependenciesLibs["retrofit-url-manager"]
+
+    //wx
+//    api rootProject.ext.dependenciesLibs["wxlibs"]
+
+
+    //camera
+    api(rootProject.ext.dependenciesLibs["album"]) {
+        exclude module: 'appcompat-v7'
+        exclude module: 'design'
+        exclude module: 'recyclerview-v7'
+        exclude module: 'cardview-v7'
+    }
+
+    api(rootProject.ext.dependenciesLibs["durban"]) {
+        exclude module: 'appcompat-v7'
+    }
+
+    //gesture
+    api rootProject.ext.dependenciesLibs["gesture"]
+
+    //tools
+    compileOnly rootProject.ext.dependenciesLibs["javax.annotation"]
+    api rootProject.ext.dependenciesLibs["dagger2"]
+    annotationProcessor(rootProject.ext.dependenciesLibs["dagger2-compiler"]) {
+        exclude module: 'jsr305'
+    }
+    api rootProject.ext.dependenciesLibs["androideventbus"]
+    api rootProject.ext.dependenciesLibs["gson"]
+    api rootProject.ext.dependenciesLibs["multidex"]
+
+    //test
+    api rootProject.ext.dependenciesLibs["timber"]
+}
+repositories {
+    mavenCentral()
+}

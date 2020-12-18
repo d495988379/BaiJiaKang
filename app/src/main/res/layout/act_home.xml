@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/act_home_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/act_home_rg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/act_home_rb_sc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:paddingTop="10dp"
+            android:checked="true"
+            android:drawableTop="@drawable/select_sc"
+            android:gravity="center"
+            android:text="商城"
+            android:background="@null"
+            android:drawablePadding="-10dp"
+            android:textColor="@drawable/select_home_rb_tv"
+            android:textSize="11dp" />
+
+        <RadioButton
+            android:id="@+id/act_home_rb_jy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/select_jy"
+            android:gravity="center"
+            android:text="加油"
+            android:paddingTop="10dp"
+            android:background="@null"
+            android:drawablePadding="-10dp"
+            android:textColor="@drawable/select_home_rb_tv"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/act_home_rb_hyqy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/select_hyqy"
+            android:gravity="center"
+            android:background="@null"
+            android:paddingTop="10dp"
+            android:text="会员权益"
+            android:drawablePadding="-10dp"
+            android:textColor="@drawable/select_home_rb_tv"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/act_home_rb_xx"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/select_xx"
+            android:gravity="center"
+            android:background="@null"
+            android:text="心选"
+            android:paddingTop="10dp"
+            android:drawablePadding="-10dp"
+            android:textColor="@drawable/select_home_rb_tv"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/act_home_rb_wd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/select_wd"
+            android:gravity="center"
+            android:background="@null"
+            android:paddingTop="10dp"
+            android:text="我的"
+            android:drawablePadding="-10dp"
+            android:textColor="@drawable/select_home_rb_tv"
+            android:textSize="11sp" />
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/contentLinearId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="13dp">
+
+        <Button
+            android:id="@+id/takePhotoBtnId"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@mipmap/img_head_change_camera_back"
+            android:text="拍照"
+            android:textSize="28px"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textColor="#4a4a4a"/>
+
+        <Button
+            android:id="@+id/pickPhtotBtnId"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@mipmap/img_head_change_photo_back"
+            android:text="相册"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textSize="28px"
+            android:textColor="#4a4a4a"/>
+
+        <Button
+            android:layout_marginTop="16px"
+            android:id="@+id/cancel_btnId"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="@mipmap/img_head_change_cancel_back"
+            android:text="取消"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textSize="28px"
+            android:textColor="#4a4a4a"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:layout_above="@id/contentLinearId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/headChangePopupBlackId"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

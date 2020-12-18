@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.nuogao.titlebar.widget.CommonTitleBar
+        android:id="@+id/commonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerText="设置支付密码"
+        app:centerTextColor="@color/white"
+        app:centerTextSize="16sp"
+        app:centerType="textView"
+        app:leftImageResource="@mipmap/ic_back_img"
+        app:leftType="imageButton"
+        app:showBottomLine="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请设置支付密码"
+        android:textColor="#404040"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"/>
+
+    <com.github.cirno_poi.verifyedittextlibrary.VerifyEditText
+        android:id="@+id/payEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defaultColor="#848484"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="100dp"
+        app:inputCount="6"
+        app:focusColor="@color/main_color"
+        app:underlineHeight="2.5dp" />
+
+</LinearLayout>

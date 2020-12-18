@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zlxn.dl.baijiakang">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+
+
+    <application
+        android:name=".app.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_app_round_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="LockedOrientationActivity">
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="8X0Km4xD89DKnGxeZvoSkaDLvaA8NPRZ" >
+        </meta-data>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+
+
+        <provider
+            android:name=".view.DemoFileProvider"
+            android:authorities="${applicationId}.demo.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".activity.RechargeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AgentManageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.UserListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.VipQyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.InvitationCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ShoppingCarActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.DetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SecondActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MineBalanceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.WithdrawalActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ImproveInformationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SetLoginPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.CodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SetPayPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ConfirmPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.PjActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ReleasePjActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AddressListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AddressAddActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.OrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.JyDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.BannerWebActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.JyOrderActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        android:id="@+id/swipeToLoadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    <!-- <com.zlxn.dl.baijiakang.view.MyScrollView
+         android:id="@+id/scrollView"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <RelativeLayout
+             android:id="@+id/swipeRel"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+             <LinearLayout
+                 android:id="@+id/emptyLin"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:gravity="center"
+                 android:layout_centerVertical="true"
+                 android:orientation="vertical"
+                 android:visibility="gone"
+                 android:layout_marginTop="200dp">
+
+                 <ImageView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:src="@mipmap/ic_no_data" />
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="20dp"
+                     android:text="暂无数据"
+                     android:textColor="@color/main_color"
+                     android:textSize="16sp" />
+
+             </LinearLayout>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:id="@+id/rv"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginHorizontal="15dp" />
+
+             </RelativeLayout>
+
+         </RelativeLayout>
+
+
+     </com.zlxn.dl.baijiakang.view.MyScrollView>-->
+
+</com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+
+    </LinearLayout>

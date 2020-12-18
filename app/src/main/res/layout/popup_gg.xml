@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@mipmap/ic_gg_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ggImg"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:src="@mipmap/ic_details_img" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/ggImg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_money_img" />
+
+                <TextView
+                    android:id="@+id/ggMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="#F7282F"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="+"
+                    android:textColor="#F7282F"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="3dp"
+                    android:src="@mipmap/ic_quan_img" />
+
+                <TextView
+                    android:id="@+id/ggQuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="#F7282F"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="+"
+                    android:textColor="#F7282F"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="返"
+                    android:textColor="#E6E6E6"
+                    android:textSize="9sp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/shape_oval"/>
+
+                <TextView
+                    android:id="@+id/ggFan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="#F7282F"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ggJyMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#9E9E9E"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ggImg"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="规格"
+                android:textColor="#404040"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.donkingliang.labels.LabelsView
+                android:id="@+id/gg_labels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                app:labelTextPaddingBottom="5dp"
+                app:labelTextPaddingLeft="12dp"
+                app:labelTextPaddingRight="12dp"
+                app:labelTextPaddingTop="5dp"
+                app:labelBackground="@drawable/select_gg"
+                app:labelTextColor="@drawable/select_gg_tv"
+                app:labelTextSize="11sp"
+                app:lineMargin="5dp"
+                app:selectType="SINGLE_IRREVOCABLY"
+                app:wordMargin="5dp"
+                android:layout_marginTop="5dp">
+            </com.donkingliang.labels.LabelsView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="购买数量"
+                    android:textColor="#404040"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="right|center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ggJian"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@mipmap/ic_jian_img" />
+
+                    <TextView
+                        android:id="@+id/commodityCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="1"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/ggAdd"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@mipmap/ic_add_img" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/detailsBottomLin"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_details_kf_img"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线客服"
+                android:textSize="10sp"
+                android:textColor="#404040"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailsShopCar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_details_car_img"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购物车"
+                android:textSize="10sp"
+                android:textColor="#404040"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:gravity="right|center_vertical">
+
+            <Button
+                android:id="@+id/detailsAddCarBtn"
+                android:layout_width="0dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="加入购物车"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_details_btn_bg"/>
+
+            <Button
+                android:id="@+id/detailsBuyBtn"
+                android:layout_width="0dp"
+                android:layout_height="27dp"
+                android:layout_weight="1"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="立即购买"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/main_color"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_details_btn_bk_bg"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
